@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Toolsy - Your Discord Embed & Utility Bot</title>
+    <meta name="description" content="The ultimate interactive embed & webhook builder. Craft, send, and edit rich messages with a powerful live editor and master Discord formatting.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #5865F2; /* Discord Blurple */
+            --background-color: #2c2f33;
+            --surface-color: #36393f;
+            --text-color: #ffffff;
+            --text-muted-color: #b9bbbe;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-color); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        h1, h2, h3 { font-weight: 600; line-height: 1.2; margin-bottom: 1rem; }
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; color: var(--primary-color); text-align: center; }
+        h3 { font-size: 1.5rem; }
+        a { text-decoration: none; color: var(--primary-color); }
+        section { padding: 4rem 0; }
+        .navbar { background: rgba(44, 47, 51, 0.8); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 100; border-bottom: 1px solid var(--surface-color); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-color); }
+        .navbar .nav-links { display: flex; list-style: none; }
+        .navbar .nav-links li { margin-left: 2rem; }
+        .navbar .nav-links a { color: var(--text-muted-color); transition: color 0.3s ease; }
+        .navbar .nav-links a:hover { color: var(--text-color); }
+        .hero { padding-top: 10rem; text-align: center; }
+        .hero h1 { background: linear-gradient(90deg, #fff, #b9bbbe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 1rem auto 2rem; color: var(--text-muted-color); }
+        .hero .cta-buttons { display: flex; justify-content: center; gap: 1rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        .btn-primary { background: var(--primary-color); color: var(--text-color); }
+        .btn-secondary { background: var(--surface-color); color: var(--text-color); }
+        #features .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .feature-card { background: var(--surface-color); padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); }
+        .feature-card .icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; }
+        .feature-card p { color: var(--text-muted-color); }
+        .footer { background: var(--surface-color); text-align: center; padding: 2rem 0; margin-top: 4rem; }
+        .footer .footer-links { list-style: none; display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+        .footer .footer-links a { color: var(--text-muted-color); transition: color 0.3s ease; }
+        .footer .footer-links a:hover { color: var(--text-color); }
+        .footer .contact-info { color: var(--text-muted-color); font-size: 0.9rem; }
+        @media (max-width: 900px) { #features .features-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } .navbar .nav-links { display: none; } .hero .cta-buttons { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container"><a href="#" class="logo">Mr. Toolsy</a><ul class="nav-links"><li><a href="#features">Features</a></li><li><a href="https://discord.gg/RcMS9jevKD" target="_blank">Support</a></li></ul></div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>The Ultimate Discord Message Builder</h1>
+                <p>Stop fighting with formatting. Mr. Toolsy provides a powerful, live editor to create, send, and even edit beautiful custom embeds for your server, DMs, or webhooks.</p>
+                <div class="cta-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1389582920523452436" class="btn btn-primary"><i class="fa-solid fa-robot"></i> Add to Discord</a>
+                    <a href="https://discord.gg/RcMS9jevKD" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-discord"></i> Join Support</a>
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <div class="container">
+                <h2>Why Choose Mr. Toolsy?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                        <h3>Live Embed Builder</h3>
+                        <p>Use an interactive interface to build rich embeds with fields, images, and colors. What you see is what you get. Works for channels and webhooks!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Advanced Control</h3>
+                        <p>Never fear a typo with `/edit_embed`. Plus, master formatting with a timestamp generator (`/timestamp`) and mention tips (`/mention_tips`).</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Works Everywhere</h3>
+                        <p>All commands are fully functional in servers, DMs, and group chats, giving you total flexibility to build and test messages wherever you are.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="/tos.html" target="_blank">Terms of Service</a></li>
+                <li><a href="/privacy.html" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://discord.gg/RcMS9jevKD" target="_blank">Support Server</a></li>
+            </ul>
+            <p class="contact-info">Copyright © 2025 Mr. Toolsy<br>Contact: <a href="mailto:toolsymr@gmail.com">toolsymr@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
